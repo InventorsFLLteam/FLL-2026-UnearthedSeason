@@ -8,34 +8,43 @@ from pybricks.tools import wait, StopWatch, Matrix
 from MyLibrary import *
 
 ######################## Route parallel program ########################
-
-# Example action
-# def __Route1_LeftArm1(duration):
-    # leftArm.run(500)
-    # wait(1000)
-    # leftArm.brake()
-    
-######################## Route program ########################
-
-### Starting position ###
-# Blue base - Align left wheel left side to 2nd Bold line from left
-
 def Route1():
-    # """ Start your code here """
-    # Step 1 - Move forward
-    
-    ####### παράδειγμα από MoveStraigh_Distance #########
-    # speed, accel, distance, useGyro, waitForComplete, stopMethod #
-    # MoveStraight_Distance(400,400,1000,True,True,Stop.BRAKE)
-    
-    ####### παράδειγμα από MoveSteering_Seconds #########
-    # speed, steering, duration #
-    # MoveSteering_Seconds(400, 0, 2000)
-
-    ######## παράδειγμα από PointTurn_Angle #######
-    # speed, accel, angle #
-    # PointTurn_Angle(300, 300, 90, False, Stop.BRAKE)
-    
-    ######## παράδειγμα από rightArm.run_time #######
-    # speed, time seconds, stopMethod, waitForComplete #
-    rightArm.run_time(500, 3000, then=Stop.BRAKE, wait=True) 
+    MoveStraight_Distance(400,500,490,True,True,Stop.BRAKE)
+    rightArm.run_time(-300, 620, then=Stop.BRAKE, wait=True)
+    wait(300)
+    rightArm.run_time(300, 620, then=Stop.BRAKE, wait=True)
+    wait(300)
+    rightArm.run_time(-300, 620, then=Stop.BRAKE, wait=True)
+    wait(300)
+    rightArm.run_time(300, 620, then=Stop.BRAKE, wait=True)
+    wait(300)
+    rightArm.run_time(-300, 620, then=Stop.BRAKE, wait=True)
+    wait(300)
+    rightArm.run_time(300, 620, then=Stop.BRAKE, wait=True)
+    wait(300)
+    rightArm.run_time(-300, 620, then=Stop.BRAKE, wait=True)
+    wait(300)
+    rightArm.run_time(300, 620, then=Stop.BRAKE, wait=True)
+    PointTurn_Angle(300, 300, -90, True, Stop.BRAKE)
+    MoveStraight_Distance(400,400,40,True,True,Stop.BRAKE)
+    PointTurn_Angle(300, 300, 90, True, Stop.BRAKE)
+    rightArm.run_time(-450, 430, then=Stop.BRAKE, wait=True) 
+    MoveStraight_Distance(200,200,270,True,True,Stop.BRAKE)#ευθεια προς Σιδηρουργείο
+    PointTurn_Angle(300, 300, -20, True, Stop.BRAKE)
+    rightArm.run_time(-450, 155, then=Stop.BRAKE, wait=True) 
+    PointTurn_Angle(300, 300, -20 ,True, Stop.BRAKE)
+    MoveStraight_Distance(200,200,30,True,True,Stop.BRAKE)
+    PointTurn_Angle(300, 300, -22 ,True, Stop.BRAKE)
+    MoveStraight_Distance(200,200,-47,True,True,Stop.BRAKE)
+    rightArm.run_time(450, 600, then=Stop.BRAKE, wait=True) 
+    PointTurn_Angle(300, 300, 145 ,True, Stop.BRAKE)
+    MoveStraight_Distance(200,200,350,True,True,Stop.BRAKE)
+    PointTurn_Angle(300, 300, -85 ,True, Stop.BRAKE)
+    MoveStraight_Distance(200,200,120,True,True,Stop.BRAKE)
+    leftArm.run_time(300,800 , then=Stop.BRAKE, wait=True)
+    MoveStraight_Distance(200,200,-20,True,True,Stop.BRAKE)
+    PointTurn_Angle(300, 300, -33 ,True, Stop.BRAKE)
+    leftArm.run_time(-100,900 , then=Stop.BRAKE, wait=True)
+    MoveStraight_Distance(200,200,-130,True,True,Stop.BRAKE)
+    PointTurn_Angle(300, 300, 40 ,True, Stop.BRAKE)
+    MoveStraight_Distance(200,200,30,True,True,Stop.BRAKE)
